@@ -2,7 +2,6 @@
 <h1><span class="glyphicon glyphicon-user"></span> Een nieuwe klant toevoegen</h1>
 <form method="post" action="customer">
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-    <input type="hidden" value="on" name="_bh"/>
     <div class="form-group">
         <div class="panel-group" id="new-user-accordion">
             <div class="panel panel-default">
@@ -75,14 +74,6 @@
                         <div class="form-group">
                             <label for="evaluation" class="col-xs-3 col-sm-2 control-label">Evaluatie</label>
                             <div class="col-xs-9 col-sm-10"><textarea name="evaluation" class="form-control" placeholder="Therapeutische evaluatie ..." rows="3"></textarea></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="bh" class="col-xs-3 col-sm-2 control-label">Zichtbaar</label>
-                            <div class="checkbox">
-                                <label>
-                                  <input type="checkbox" name="bh" id="bh" checked="checked">
-                                </label>
-                            </div>
                         </div>
                     </div>
                 </div>

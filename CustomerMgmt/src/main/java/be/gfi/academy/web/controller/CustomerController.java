@@ -81,7 +81,6 @@ public class CustomerController {
 
         log.info("Update session ...");
         final Session dbSession = sessionRepository.findOne(sid);
-        dbSession.setBh(session.isBh());
         dbSession.setPrice(session.getPrice());
         dbSession.setEvaluation(session.getEvaluation());
         dbSession.setComplaints(session.getComplaints());

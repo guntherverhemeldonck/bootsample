@@ -15,7 +15,8 @@
             <column name="email" type="varchar(255)">
                 <constraints unique="true"/>
             </column>
-            <column name="name" type="varchar(120)"/>
+            <column name="firstname" type="varchar(75)"/>
+            <column name="lastname" type="varchar(120)"/>
             <column name="phone" type="varchar(50)"/>
             <column name="address" type="varchar(255)"/>
             <column name="postalcode" type="varchar(30)"/>
@@ -25,7 +26,6 @@
             <column name="active" type="boolean"/>
             <column name="created_at" type="datetime"/>
             <column name="updated_at" type="datetime"/>
-            <column name="lastname" type="varchar(75)"/>
         </createTable>
 
         <createTable tableName="customer_sessions">

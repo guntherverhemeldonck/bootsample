@@ -7,7 +7,6 @@
             </div>
             <form class="form-horizontal" role="form" method="post" action="/customer/${customer.id?c}/session">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                <input type="hidden" value="on" name="_bh"/>
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="session_date" class="col-sm-2 control-label">Datum</label>
@@ -28,16 +27,6 @@
                     <div class="form-group">
                         <label for="evalutation" class="col-sm-2 control-label">Evaluatie</label>
                         <div class="col-sm-10"><textarea id="evaluation" name="evaluation" class="form-control" placeholder="Therapeutische evaluatie ..." rows="3"></textarea></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="bh" class="col-sm-2 control-label">Zichtbaar</label>
-                        <div class="col-sm-10">
-                            <div class="checkbox">
-                                <label>
-                                  <input type="checkbox" name="bh" id="bh" checked="checked">
-                                </label>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">

@@ -19,8 +19,6 @@ public class Session {
     @Column
     private String complaints;
     @Column
-    private boolean bh;
-    @Column
     private double price;
     @Column(name = "created_at")
     private Date createdAt;

@@ -81,8 +81,6 @@
                                 <div class="panel-body">
                                     <form method="post" action="/customer/${customer.id?c}/session/${session.id?c}" class="form-horizontal" role="form">
                                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                                        <#-- https://stackoverflow.com/questions/8723765/checkbox-values-do-not-bind-into-object-when-false#answer-8724006 -->
-                                        <input type="hidden" value="on" name="_bh"/>
                                         <div class="form-group">
                                             <label class="col-xs-3 col-sm-2 control-label" for="complaints">Klachten</label>
                                             <div class="col-xs-9 col-sm-10">
@@ -98,10 +96,6 @@
                                         <div class="form-group">
                                             <label class="col-xs-3 col-sm-2 control-label" for="evaluation">Prijs</label>
                                             <div class="col-xs-9 col-sm-10"><input name="price" type="text" class="form-control" value="${session.price}"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-xs-3 col-sm-2 control-label" for="evaluation">Zichtbaar</label>
-                                            <div class="col-xs-9 col-sm-10"><input type="checkbox" clas="form-control" name="bh" <#if session.bh >checked="checked"</#if>></div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-xs-offset-3 col-sm-offset-2 col-xs-3 col-sm-10"><button type="submit" class="btn btn-primary alter-session-btn">Wijzigen</button></div>
