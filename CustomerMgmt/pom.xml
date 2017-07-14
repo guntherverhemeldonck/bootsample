@@ -82,19 +82,4 @@
             </resource>
         </resources>
     </build>
-
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <datasource.url>jdbc:mysql://localhost/academy_17</datasource.url>
-                <datasource.username>root</datasource.username>
-                <datasource.password>password</datasource.password>
-                <datasource.driverclassname>com.mysql.cj.jdbc.Driver</datasource.driverclassname>
-            </properties>
-        </profile>
-    </profiles>
 </project>
