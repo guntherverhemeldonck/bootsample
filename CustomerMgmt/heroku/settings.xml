@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <profiles>
+        <profile>
+            <id>heroku</id>
+            <properties>
+                <datasource.url>${JDBC_DATABASE_URL}</datasource.url>
+                <datasource.username>${JDBC_DATABASE_USERNAME}</datasource.username>
+                <datasource.password>${JDBC_DATABASE_PASSWORD}</datasource.password>
+                <datasource.driverclassname>com.mysql.cj.jdbc.Driver</datasource.driverclassname>
+            </properties>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>heroku</activeProfile>
+    </activeProfiles>
+</settings>

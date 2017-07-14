@@ -1,0 +1,59 @@
+body.login {
+    background: url("mobile.jpg") no-repeat;
+    background-size: cover;
+}
+@media screen and (max-screen-width:1024px){
+    body.login {
+        background: url("tablet.jpg") no-repeat;
+    }
+}
+@media screen and (min-screen-width:1025px){
+    body.login {
+        background: url("sea-2000.jpg") no-repeat;
+    }
+}
+
+h1 {
+    font-size:1.5em;
+    line-height:1.5em;
+    margin-bottom:20px;
+    color:#2198b5;
+}
+.form-horizontal .form-group{
+    margin-top: 15px;
+}
+
+.panel-body .form-group {
+    display: flex;
+}
+
+#search-results {
+    position:absolute;
+    list-style:none;
+    padding:0;
+    background:#F1F1F1;
+    z-index:10;
+    box-shadow: 2px 7px 10px rgba(0,0,0,0.4);
+}
+
+#search-results li {
+    border-bottom: 1px solid #ccc;
+    min-width: 196px;
+}
+#search-results li:last-child {
+    border-bottom:0;
+}
+
+#search-results a {
+    padding: 5px 15px;
+    display:block;
+}
+#search-results a:hover {
+    text-decoration:none;
+    background:#ccc;
+    color: #fff;
+}
+
+.tab-pane {
+    padding-top: 10px !important;
+}

@@ -1,0 +1,44 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/util
+   http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+
+    <bean id="jdo" class="be.gfi.academy.Consultant">
+        <constructor-arg index="0" value="JDO"/>
+        <constructor-arg index="1" value="Jane Doe"/>
+        <constructor-arg index="2" value="ARCHITECT_JAVA"/>
+        <constructor-arg index="3" value="3000"/>
+        <constructor-arg index="4" value="DIGITAL"/>
+    </bean>
+
+    <bean id="jod" class="be.gfi.academy.Consultant">
+        <constructor-arg index="0" value="JOD"/>
+        <constructor-arg index="1" value="John Doe"/>
+        <constructor-arg index="2" value="JUNIOR_JAVA"/>
+        <constructor-arg index="3" value="2500"/>
+        <constructor-arg index="4" value="DIGITAL"/>
+    </bean>
+
+    <bean id="project" class="be.gfi.academy.Project">
+        <constructor-arg index="0" value="GFI"/>
+        <constructor-arg index="1" value="Academy"/>
+        <constructor-arg index="2">
+            <util:list value-type="be.gfi.academy.Effort">
+                <bean class="be.gfi.academy.Effort">
+                    <constructor-arg value="50"/>
+                    <constructor-arg ref="jdo"/>
+                </bean>
+                <bean class="be.gfi.academy.Effort">
+                    <constructor-arg value="150"/>
+                    <constructor-arg ref="jod"/>
+                </bean>
+            </util:list>
+        </constructor-arg>
+    </bean>
+</beans>
