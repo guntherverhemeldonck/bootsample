@@ -3,6 +3,7 @@ package be.gfi.academy;
 import be.gfi.academy.strategy.RiskStrategy;
 import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -28,6 +29,13 @@ public class Project {
 
     public List<Effort> getEfforts() {
         return Collections.unmodifiableList(efforts);
+    }
+
+    public void addEffort(Effort effort) {
+        if (efforts == null) {
+            efforts = new ArrayList<>();
+        }
+        efforts.add(effort);
     }
 
     public double getTotalCost() {
