@@ -11,7 +11,6 @@ public class Project {
     private String customerName;
     private String projectName;
     private List<Effort> efforts;
-    private double totalCost;
 
     public Project(String customerName, String projectName, List<Effort> efforts) {
         this.customerName = customerName;
@@ -36,9 +35,5 @@ public class Project {
             efforts = new ArrayList<>();
         }
         efforts.add(effort);
-    }
-
-    public double getTotalCost() {
-        return totalCost;
     }
 }
