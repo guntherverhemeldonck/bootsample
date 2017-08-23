@@ -100,6 +100,7 @@ public class CustomerController {
         log.info("Create session for user {} ...", custId);
         final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         final Date sessionDate = sdf.parse(date + " " + time);
+        session.setId(0); // fix
         session.setCustomerId(custId);
         session.setSessionDate(sessionDate);
         session.setCreatedAt(new Date());
